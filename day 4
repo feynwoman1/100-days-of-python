@@ -12,3 +12,71 @@ x = random.randint(0,b)
 y = names[x]
 
 print(f"{y} is going to buy the meal today!")
+
+#2
+# 🚨 Don't change the code below 👇
+row1 = ["⬜️","⬜️","⬜️"]
+row2 = ["⬜️","⬜️","⬜️"]
+row3 = ["⬜️","⬜️","⬜️"]
+map = [row1, row2, row3]
+print(f"{row1}\n{row2}\n{row3}")
+position = input("Where do you want to put the treasure? ")
+# 🚨 Don't change the code above 👆
+
+#Write your code below this row 👇
+(map[int(position[1]) - 1][int(position[0]) - 1]) = "x"
+#Write your code above this row 👆
+
+# 🚨 Don't change the code below 👇
+print(f"{row1}\n{row2}\n{row3}")
+
+#3
+rock = '''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
+
+paper = '''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+'''
+
+scissors = '''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
+
+#Write your code below this line 👇
+c = int(input("What do you choose? Type 0 for Rock, 1 for Paper, 2 for scissors: "))
+if c == 0:
+  print(rock)
+elif c == 1:
+  print(paper)
+elif c == 2:
+  print(scissors)
+  
+choices = [rock, paper, scissors]
+import random 
+i = random.randint(0,2)
+move = choices[i]
+print("computer chose",move)
+
+if (c == 0 and i == 1) or (c == 1 and i == 2) or (c == 2 and i == 0):
+   print("you lose.")
+elif c == i:
+  print("it's a tie.")
+else:
+  print("you win.")
+  
